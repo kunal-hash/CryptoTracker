@@ -41,6 +41,7 @@ export const SettingChartData = (setChartData, prices1, prices2, crypto1, crypto
       labels: prices1.map((price) => convertDate(price[0])),
       datasets: [
         {
+          label:crypto1.id,
           data: prices1.map((price) => price[1]),
           borderColor: "#3a80e9",
           borderWidth: 2,

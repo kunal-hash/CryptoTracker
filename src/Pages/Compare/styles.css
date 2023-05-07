@@ -1,3 +1,14 @@
 .toggle-price-type{
     padding: 0.5rem;
 }
+
+
+@media only screen and (max-width:490px){
+    .grey-wrapper , .toggle-price-type{
+        width: 100vw;
+        margin-left: 0.1rem;
+        overflow: hidden;
+
+    }
+    
+}

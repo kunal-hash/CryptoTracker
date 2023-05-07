@@ -19,19 +19,19 @@ function Grid({ coin }) {
           coin.market_cap_change_percentage_24h < 0 && "grid-container-red"
         }`}
       >
-        <div className="info-flex">
-          <div>
+        <div className="info-flex-grid space-between">
+          <div className="logo-wrapper-grid">
             <img className="coin-logo" src={coin.image}></img>
           </div>
 
-          <div className="name-column">
-            <p className="coin-symbol">{coin.symbol}</p>
-            <p className="coin-name">{coin.name}</p>
+          <div className="name-column-grid">
+            <p className="coin-symbol-grid">{coin.symbol}</p>
+            <p className="coin-name-grid">{coin.name}</p>
           </div>
 
           <div
-            className={`watchlist-icon  ${
-              coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
+            className={`watchlist-icon-grid  ${
+              coin.price_change_percentage_24h < 0 && "watchlist-icon-red-grid"
             }`}
             onClick={(e) => {
               if (isCoinAdded) {

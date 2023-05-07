@@ -23,7 +23,7 @@ function List({ coin }) {
     <table className="list-table">
       <Link to={`/coin/${coin.id}`}>
         <tr className="list-row">
-          <td className="info-flex ">
+          <td className="info-flex-list ">
             <Tooltip title="logo" placement="bottom-end">
               <img className="coin-logo coin-logo-td" src={coin.image}></img>
             </Tooltip>
@@ -31,17 +31,17 @@ function List({ coin }) {
 
           <td className="name-column name-column-td td-info ">
             <Tooltip title="Symbol" placement="bottom-end">
-              <p className="coin-symbol font-small">{coin.symbol}</p>
+              <p className="coin-symbol-list font-small">{coin.symbol}</p>
             </Tooltip>
             <Tooltip title="Name" placement="bottom-end">
-              <p className="coin-name font-small">{coin.name}</p>
+              <p className="coin-name-list font-small">{coin.name}</p>
             </Tooltip>
           </td>
 
           {coin.market_cap_change_percentage_24h > 0 ? (
             <Tooltip title="Price Change" placement="bottom-end">
               <td className="chip-flex">
-                <div className="price-chip price-chip-list ">
+                <div className="price-chip price-chip-list chip-green">
                   {coin.price_change_percentage_24h.toFixed(2)}%
                 </div>
                 <div className="icon-chip">
@@ -91,9 +91,11 @@ function List({ coin }) {
               </p>
             </td>
           </Tooltip>
-          <td className="coin-name-mobile">
-            ${convertNumber(coin.market_cap)}
-          </td>
+          <Tooltip title="Market Cap">
+            <td className="coin-name-mobile market-cap-responsive">
+              ${convertNumber(coin.market_cap)}
+            </td>
+          </Tooltip>
         </tr>
       </Link>
     </table>

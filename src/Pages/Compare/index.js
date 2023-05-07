@@ -151,7 +151,7 @@ function Compare() {
         <Loader></Loader>
       ) : (
         <>
-          <div className="coins-days-flex">
+          <div className="coins-days-flex coin-flex-com">
             <SelectCoins
               crypto1={crypto1}
               crypto2={crypto2}
@@ -180,13 +180,13 @@ function Compare() {
               multiAxis={true}
             ></Linechart>
           </div>
-          <div>
+          <div className="">
             <CoinInfo
               heading={crypto1Data.name} //prop name should be used the same in the main component
               desc={crypto1Data.desc}
             ></CoinInfo>
           </div>
-          <div>
+          <div className="">
             <CoinInfo
               heading={crypto2Data.name} //prop name should be used same in the main component
               desc={crypto2Data.desc}
