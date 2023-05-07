@@ -1,13 +1,21 @@
-.coininfo-coin-desc a{
-   cursor: pointer;
-    text-decoration: underline;
+.coininfo-coin-desc a {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.coininfo-coin-name,.coininfo-coin-desc {
-    cursor: pointer;
-
+.coininfo-coin-name,
+.coininfo-coin-desc {
+  cursor: pointer;
 }
 
-.coininfo-coin-desc a:hover{
-    color: var(--blue);
+.coininfo-coin-desc a:hover {
+  color: var(--blue);
+}
+
+.coininfo-coin-name {
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+}
+.coininfo-coin-desc {
+  padding-left: 1rem;
 }

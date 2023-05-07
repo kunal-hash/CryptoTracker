@@ -23,6 +23,7 @@ function CoinPage() {
 
   useEffect(() => {
     if (id) {
+      console.log("ID >>>", id);
       getData();
     }
   }, [id]);
@@ -63,11 +64,13 @@ function CoinPage() {
       if (prices) {
        
         SettingChartData(setChartData, prices);
-        
+        console.log("harami", prices);
         setIsLoading(false);
       }
     }
-  }
+  };
+
+
   const handleDaysChange = async (event) => {
     setIsLoading(true);
     setDays(event.target.value);
@@ -107,7 +110,7 @@ function CoinPage() {
         </>
       )}
     </div>
-  );
+  )
 }
 
 export default CoinPage;
